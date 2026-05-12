@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: loksai-api-deploy
+  name: amjam-api-deploy
 spec:
   replicas: 1
   selector:
@@ -14,14 +14,14 @@ spec:
     spec:
       containers:
       - name: api
-        image: loksaieta/loksai-mlops830api:latest
+        image: amjam07/edureka_mlops_cicd_build_img_api:latest
         ports:
         - containerPort: 8000
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: loksai-api-svc
+  name: amjam-api-svc
 spec:
   selector:
     app: api
